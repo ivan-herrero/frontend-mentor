@@ -1,0 +1,22 @@
+{
+  "title": "Reliable, efficient delivery",
+  "subtitle": "Powered by Technology",
+  "body": "Our Artifical intelligence powered tools use millions of project data points to ensure that your project is successful",
+  "cards": [{
+      "title": "Supervisor",
+      "body": "Monitors activity to identify project roadblocks"
+    },
+    {
+      "title": "Team Builder",
+      "body": "Scans our talent network to create the optimal team for your project"
+    },
+    {
+      "title": "Karma",
+      "body": "Regularly evaluates our talent to ensure quality"
+    },
+    {
+      "title": "Calculator",
+      "body": "Uses data from past projects to provide better delivery estimates"
+    }
+  ]
+}
