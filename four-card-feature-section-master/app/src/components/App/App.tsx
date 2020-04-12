@@ -2,13 +2,14 @@ import React from 'react';
 
 import strings from '../../strings.json';
 import { StringsContextProvider } from '../../context/StringsContext';
-import './App.scss';
+import Header from '../Header/Header';
+import styles from './App.module.scss';
 
 function App() {
   return (
     <StringsContextProvider value={strings}>
-      <div className="App">
-        App
+      <div className={styles.app}>
+        <Header />
       </div>
     </StringsContextProvider>
   );
