@@ -1,0 +1,21 @@
+@import 'styles/globals.scss';
+
+.cards>*:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .cards {
+    display: flex;
+    align-items: center;
+  }
+
+  .cards>*:first-child {
+    margin-bottom: 0;
+  }
+
+  .midColumn {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}

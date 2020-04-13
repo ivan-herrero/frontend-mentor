@@ -6,6 +6,8 @@ import KarmaIcon from '../../assets/images/icon-karma.svg'
 import SupervisorIcon from '../../assets/images/icon-supervisor.svg'
 import TeamBuilderIcon from '../../assets/images/icon-team-builder.svg'
 import Card from '../Card';
+import styles from './Cards.module.scss';
+import { CardProps } from '../Card/Card';
 
 interface CardStringEntry {
   id: string
@@ -17,18 +19,29 @@ function Cards() {
   //@ts-ignore
   const cards = useStringsContext().cards as Array<CardStringEntry>
 
+  function renderCard(index: number): JSX.Element {
+    const { id, title, body } = cards[index];
+
+    const iconSrc = getIcon(id);
+    const accent = COLOR_ACCENTS[index];
+    const props: CardProps = {title, body, iconSrc, accent};
+
+    return <Card {...props} />
+  }
+
   return (
-    <main>
-      {cards.map(renderCard)}
+    <main className={styles.cards}>
+      {renderCard(0)}
+      <div className={styles.midColumn}>
+        {renderCard(1)}
+        {renderCard(2)}
+      </div>
+      {renderCard(3)}
     </main>
   )
 }
 
 const COLOR_ACCENTS = ["cyan", "red", "orange", "blue"];
-
-function renderCard({ id, title, body }: CardStringEntry, index: number): JSX.Element {
-  return <Card key={id} title={title} body={body} iconSrc={getIcon(id)} accent={COLOR_ACCENTS[index]} />
-}
 
 function getIcon(id: string) {
   switch (id) {
