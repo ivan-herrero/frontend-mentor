@@ -1,14 +1,29 @@
 @import './styles/globals.scss';
 @import './styles/fonts.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding-top: 4em;
-  padding-bottom: 3em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   padding-left: 2em;
   padding-right: 2em;
+  background-color: $color-secondary-very-light-gray;
   font-size: $font-size-body;
   font-family: $font-family, sans-serif;
+  color: $color-secondary-grayish-blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-secondary-very-dark-blue;
 }
 
 h1 {
@@ -21,8 +36,8 @@ h2 {
   font-weight: 800;
 }
 
-p {
-  font-weight: 200;
+h3 {
+  font-size: 1.3em;
 }
 
 @media screen and (min-width: $desktop-breakpoint) {

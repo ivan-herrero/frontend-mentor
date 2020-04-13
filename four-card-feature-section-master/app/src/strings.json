@@ -3,18 +3,22 @@
   "subtitle": "Powered by Technology",
   "body": "Our Artifical intelligence powered tools use millions of project data points to ensure that your project is successful",
   "cards": [{
+      "id": "supervisor",
       "title": "Supervisor",
       "body": "Monitors activity to identify project roadblocks"
     },
     {
+      "id": "team-builder",
       "title": "Team Builder",
       "body": "Scans our talent network to create the optimal team for your project"
     },
     {
+      "id": "karma",
       "title": "Karma",
       "body": "Regularly evaluates our talent to ensure quality"
     },
     {
+      "id": "calculator",
       "title": "Calculator",
       "body": "Uses data from past projects to provide better delivery estimates"
     }

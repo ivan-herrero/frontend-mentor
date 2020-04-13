@@ -1,0 +1,50 @@
+@import "styles/globals.scss";
+
+$shadow-color: #d8e2ee;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  border-radius: $spacing-s;
+  border-top-style: solid;
+  border-top-width: $spacing-xs;
+  margin-bottom: 2em;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 25px -5px $shadow-color;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: $spacing-xs;
+}
+
+.card p {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+
+.iconWrapper {
+  margin-top: $spacing-m;
+  text-align: right;
+}
+
+.accent-red {
+  border-top-color: $color-primary-red;
+}
+
+.accent-cyan {
+  border-top-color: $color-primary-cyan;
+}
+
+.accent-orange {
+  border-top-color: $color-primary-orange;
+}
+
+.accent-blue {
+  border-top-color: $color-primary-blue;
+}
