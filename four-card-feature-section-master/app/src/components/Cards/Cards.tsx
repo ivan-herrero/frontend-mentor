@@ -24,19 +24,27 @@ function Cards() {
 
     const iconSrc = getIcon(id);
     const accent = COLOR_ACCENTS[index];
-    const props: CardProps = {title, body, iconSrc, accent};
+    const props: CardProps = { title, body, iconSrc, accent };
 
     return <Card {...props} />
   }
 
+  // With Flexbox
+  // return (
+  //   <main className={styles.cards}>
+  //     {renderCard(0)}
+  //     <div className={styles.midColumn}>
+  //       {renderCard(1)}
+  //       {renderCard(2)}
+  //     </div>
+  //     {renderCard(3)}
+  //   </main>
+  // )
+
+  // With CSS Grid
   return (
     <main className={styles.cards}>
-      {renderCard(0)}
-      <div className={styles.midColumn}>
-        {renderCard(1)}
-        {renderCard(2)}
-      </div>
-      {renderCard(3)}
+      {cards.map((_, index) => renderCard(index))}
     </main>
   )
 }

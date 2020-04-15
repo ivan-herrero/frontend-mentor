@@ -45,3 +45,10 @@ $shadow-color: #d8e2ee;
 .accent-blue {
   border-top-color: $color-primary-blue;
 }
+
+// With CSS Grid
+@media screen and (min-width: $desktop-breakpoint) {
+  .card {
+    margin: 0;
+  }
+}

@@ -4,18 +4,52 @@
   margin-bottom: 0;
 }
 
+// With Flexbox
+// @media screen and (min-width: $desktop-breakpoint) {
+//   .cards {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .cards>*:first-child {
+//     margin-bottom: 0;
+//   }
+
+//   .midColumn {
+//     margin-left: 2em;
+//     margin-right: 2em;
+//   }
+// }
+
+// With CSS Grid
 @media screen and (min-width: $desktop-breakpoint) {
   .cards {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2em;
+    row-gap: 2em;
+    grid-template-areas:
+      "  .    second    ."
+      "first  second  fourth"
+      "first  third   fourth"
+      "  .    third     ."
+    ;
   }
 
   .cards>*:first-child {
-    margin-bottom: 0;
+    grid-area: first;
   }
 
-  .midColumn {
-    margin-left: 2em;
-    margin-right: 2em;
+  .cards>*:nth-child(2) {
+    grid-area: second;
+  }
+
+  .cards>*:nth-child(3) {
+    grid-area: third;
+  }
+
+  .cards>*:last-child {
+    grid-area: fourth;
   }
 }
